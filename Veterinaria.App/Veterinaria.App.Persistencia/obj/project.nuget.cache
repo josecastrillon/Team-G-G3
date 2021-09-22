@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Pj/x1k6oJt+ql8UN2jWgG6de/0wGqQuAvaNV4xSgL/cRNb/v0bZGE7icgtmRxCT5ZSMn53K2PGoJoSVSCwQJow==",
+  "success": true,
+  "projectFilePath": "D:\\MisionTIC\\desarrollos\\Team-G-G3\\Veterinaria.App\\Veterinaria.App.Persistencia\\Veterinaria.App.Persistencia.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jose Castrillón\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jose Castrillón\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
