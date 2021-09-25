@@ -1,0 +1,9 @@
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Dominio\bin\Debug\netstandard2.1\Veterinaria.App.Dominio.deps.json
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Dominio\bin\Debug\netstandard2.1\Veterinaria.App.Dominio.dll
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Dominio\bin\Debug\netstandard2.1\Veterinaria.App.Dominio.pdb
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.1\Veterinaria.App.Dominio.csprojAssemblyReference.cache
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.1\Veterinaria.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.1\Veterinaria.App.Dominio.AssemblyInfo.cs
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.1\Veterinaria.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.1\Veterinaria.App.Dominio.dll
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.1\Veterinaria.App.Dominio.pdb

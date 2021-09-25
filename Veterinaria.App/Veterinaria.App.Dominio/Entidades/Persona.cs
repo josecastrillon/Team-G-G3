@@ -12,7 +12,7 @@ namespace Veterinaria.App.Dominio
         public String telefono { get; set; }
         public String ciudad { get; set; }
         public String password { get; set; }
-        public String tarjetaProfesional { get; set; }
+        
         public Genero genero { get; set; }
     }
 }
