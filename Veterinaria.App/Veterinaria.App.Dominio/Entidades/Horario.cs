@@ -8,6 +8,6 @@ namespace Veterinaria.App.Dominio
         public DateTime horaInicio { get; set; }
         public DateTime horaFin { get; set; }
 
-        public ICollection<Veterinario> Veterinario { get; set; }
+        
     }
 }

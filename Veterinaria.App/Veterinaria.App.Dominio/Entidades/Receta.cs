@@ -6,6 +6,6 @@ namespace Veterinaria.App.Dominio
     {
         public int Id { get; set; }
         public Anotacion anotacion { get; set; }
-        public ICollection<Medicamento> Medicamento { get; set; }
+        //public ICollection<Medicamento> Medicamento { get; set; }
     }
 }
