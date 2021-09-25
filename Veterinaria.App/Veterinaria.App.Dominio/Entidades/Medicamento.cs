@@ -6,5 +6,6 @@ namespace Veterinaria.App.Dominio
     {
         public int Id { get; set; }
         public String nombre { get; set; }
+        public ICollection<Receta> Receta { get; set; }
     }
 }
