@@ -8,5 +8,6 @@ namespace Veterinaria.App.Dominio
         public Mascota mascota { get; set; }
         public DateTime fechaCreacion { get; set; }
         public DateTime fechaActualizacion { get; set; }
+        
     }
 }
