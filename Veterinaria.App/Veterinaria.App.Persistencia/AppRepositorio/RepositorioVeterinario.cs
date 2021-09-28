@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Veterinaria.App.Dominio;
+using System.Linq;
 
 namespace Veterinaria.App.Persistencia
 {
@@ -24,7 +25,12 @@ namespace Veterinaria.App.Persistencia
 
         public void DeleteVeterinario(string documento)
         {
-            throw new NotImplementedException();
+            Veterinario veterinarioencontrado = _appContexto.Veterinarios.Where(x => x.documento == documento).FirstOrDefault();
+            if (veterinarioencontrado!=null){
+                _appContexto.Remove(veterinarioencontrado);
+                _appContexto.SaveChanges();
+            }
+
         }
 
         public IEnumerable<Veterinario> GetAllVeterinario()
@@ -34,12 +40,25 @@ namespace Veterinaria.App.Persistencia
 
         public Veterinario GetVeterinario(Veterinario veterinario)
         {
-            throw new NotImplementedException();
+            Veterinario veterinarioencontrado = _appContexto.Veterinarios.Where(x => x.documento == veterinario.documento).FirstOrDefault();
+            return veterinarioencontrado;
         }
 
         public Veterinario UpdateVeterinario(Veterinario veterinario)
         {
-            throw new NotImplementedException();
+            Veterinario veterinarioencontrado = _appContexto.Veterinarios.Where(x => x.documento == veterinario.documento).FirstOrDefault();
+            if (veterinarioencontrado != null)
+            {
+                veterinarioencontrado.nombre = veterinario.nombre;
+                veterinarioencontrado.apellido = veterinario.apellido;
+                veterinarioencontrado.direccion = veterinario.direccion;
+                veterinarioencontrado.telefono = veterinario.telefono;
+                veterinarioencontrado.ciudad = veterinario.ciudad;
+                veterinarioencontrado.password = veterinario.password;
+                veterinarioencontrado.genero = veterinario.genero;
+                veterinarioencontrado.tarjetaProfesional = veterinario.tarjetaProfesional;
+            }
+            return veterinarioencontrado;
         }
     }
 }

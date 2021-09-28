@@ -11,7 +11,7 @@ namespace Veterinaria.App.Consola
         static void Main(string[] args)
         {
             
-            AddVeterinario();
+            //AddVeterinario();
         }
 
         private static void AddVeterinario (){

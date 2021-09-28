@@ -12,6 +12,7 @@ namespace Veterinaria.App.Persistencia
         public DbSet<HistoriaClinica> HistoriasClinicas { get; set; }
         public DbSet<Mascota> Mascotas { get; set; }
         public DbSet<Medicamento> Medicamentos { get; set; }
+        public DbSet<Veterinario> Veterinarios { get; set; }
         
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Propietario> Propietarios { get; set; }
@@ -21,7 +22,15 @@ namespace Veterinaria.App.Persistencia
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog = ClinicaVeterinaria");
+            if(!optionsBuilder.IsConfigured )
+            {
+                optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog = ClinicaVeterinaria");
+            }
+            
+        }
+
+        protected override void OnModelCreating (ModelBuilder builder){
+            builder.Entity <Persona>().HasIndex(u => u.documento).IsUnique();
         }
 
     }

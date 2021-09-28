@@ -154,7 +154,7 @@ namespace Veterinaria.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("documento")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("genero")
                         .HasColumnType("int");
@@ -165,13 +165,14 @@ namespace Veterinaria.App.Persistencia.Migrations
                     b.Property<string>("password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("tarjetaProfesional")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("telefono")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("documento")
+                        .IsUnique()
+                        .HasFilter("[documento] IS NOT NULL");
 
                     b.ToTable("Personas");
 
@@ -227,6 +228,9 @@ namespace Veterinaria.App.Persistencia.Migrations
             modelBuilder.Entity("Veterinaria.App.Dominio.Veterinario", b =>
                 {
                     b.HasBaseType("Veterinaria.App.Dominio.Persona");
+
+                    b.Property<string>("tarjetaProfesional")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Veterinario");
                 });
