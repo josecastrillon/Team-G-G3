@@ -35,7 +35,7 @@ namespace Veterinaria.App.Persistencia
 
         public IEnumerable<Veterinario> GetAllVeterinario()
         {
-            throw new NotImplementedException();
+            return _appContexto.Veterinarios;
         }
 
         public Veterinario GetVeterinario(Veterinario veterinario)

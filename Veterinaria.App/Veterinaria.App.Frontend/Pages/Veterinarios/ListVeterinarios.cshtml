@@ -1,0 +1,49 @@
+﻿@page
+@model Veterinaria.App.Frontend.Pages.ListVeterinariosModel
+@{
+}
+<h1>Gestionar Veterinarios</h1>
+<p>En este espacio podras gestionar los veterinarios</p>
+<a class = "btn btn-primary table-btn" asp-page="./AddVeterinarios">Agregar Nuevo Veterinario</a>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      
+      <th scope="col">Documento</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">ciudad</th>
+      <th scope="col">Password</th>
+      <th scope="col">Género</th>
+      <th scope="col">Tarjeta Profesional</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    @foreach( var veterinarios in Model.veterinarios){
+        
+        <tr>
+      
+      
+      <td>@veterinarios.documento</td>
+      <td>@veterinarios.nombre</td>
+      <td>@veterinarios.apellido</td>
+      <td>@veterinarios.direccion</td>
+      <td>@veterinarios.telefono</td>
+      <td>@veterinarios.ciudad</td>
+      <td>@veterinarios.password</td>
+      <td>@veterinarios.genero</td>
+      <td>@veterinarios.tarjetaProfesional</td>
+      
+      <td><a class="btn btn-primary table-btn" asp-page=".\DetailVeterinarios" asp-route-cedula=@veterinarios.documento></a>Detalles</td>
+      <td><a class= "btn btn-primary table-btn" asp-page=".\EditVeterinarios" asp-route-cedula=@veterinarios.documento></a>Editar</td>
+    </tr>
+    
+    }
+   
+   
+  </tbody>
+</table>
+
