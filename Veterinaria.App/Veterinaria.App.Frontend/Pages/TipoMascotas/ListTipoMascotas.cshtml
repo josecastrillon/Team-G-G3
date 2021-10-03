@@ -1,0 +1,38 @@
+﻿@page
+@model Veterinaria.App.Frontend.Pages.ListTiposMascotasModel
+@{
+}
+
+<h1>Gestionar Tipo Mascotas</h1>
+<p>En este espacio podras gestionar los tipos de mascotas atendidas en la clínica</p>
+<a class = "btn btn-primary table-btn" asp-page="./AddTipoMascotas">Agregar Nuevo Tipo de Mascota</a>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      
+      <th scope="col">Id</th>
+      <th scope="col">Clase</th>
+      <th scope="col">Opciones</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    @foreach( var mascotas in Model.tipomascotas){
+        
+        <tr>
+            
+      <td>@mascotas.Id</td>
+      <td>@mascotas.clase</td>
+      <td><a class="btn btn-primary table-btn" asp-page=".\DetailTipoMascotas" asp-route-Id=@mascotas.Id>Detalles</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\EditTipoMascotas" asp-route-Id=@mascotas.Id>Editar</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\RemoveTipoMascotas" asp-route-Id=@mascotas.Id>Eliminar</a>
+       
+      </td>
+
+    </tr>
+    
+    }
+   
+   
+  </tbody>
+</table>

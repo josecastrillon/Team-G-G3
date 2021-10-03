@@ -1,0 +1,45 @@
+﻿@page
+@model Veterinaria.App.Frontend.Pages.ListMascotasModel
+@{
+}
+<h1>Gestionar Mascotas</h1>
+<p>En este espacio podras gestionar las mascotas</p>
+<a class = "btn btn-primary table-btn" asp-page="./AddMascotas">Agregar Nueva Mascota</a>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      
+      
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Fecha de Nacimiento</th>
+      <th scope="col">Propietario</th>
+      <th scope="col">Tipo de Mascota</th>
+      <th scope="col">Opciones</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    @foreach( var mascotas in Model.mascotas){
+        
+        <tr>
+            
+      <td>@mascotas.Id</td>
+      <td>@mascotas.nombre</td>
+      <td>@mascotas.fechaNacimiento</td>
+      <td>@mascotas.propietario.nombre</td>
+      
+      <td>@mascotas.tipoMascota.clase</td>
+      <td><a class="btn btn-primary table-btn" asp-page=".\DetailMascotas" asp-route-Id=@mascotas.Id>Detalles</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\EditMascotas" asp-route-Id=@mascotas.Id>Editar</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\RemoveMascotas" asp-route-Id=@mascotas.Id>Eliminar</a>
+       
+      </td>
+
+    </tr>
+    
+    }
+   
+   
+  </tbody>
+</table>

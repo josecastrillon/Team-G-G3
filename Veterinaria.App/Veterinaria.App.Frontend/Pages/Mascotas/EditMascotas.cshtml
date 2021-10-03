@@ -1,0 +1,36 @@
+﻿@page
+@model Veterinaria.App.Frontend.Pages.EditMascotasModel
+@using Veterinaria.App.Dominio;
+@{
+}
+<h1>Editar Mascota</h1>
+<form method ="post" class ="mt-3">
+<input hidden asp-for = "mascota.Id">
+
+<div class="form-group row">
+    <label asp-for="mascota.nombre" class ="col-sm-2">Nombre</label>
+    <input asp-for = "mascota.nombre" class ="form-control"  required>
+</div>
+
+<div class="form-group row">
+    <label asp-for="mascota.fechaNacimiento" class ="col-sm-2">Fecha Nacimiento</label>
+    <input asp-for = "mascota.fechaNacimiento" class ="form-control" >
+</div>
+
+
+<div class="form-group row">
+        <label asp-for="idtipomascota" class="col-sm-2">Tipo de Mascota</label>
+        <select asp-for="idtipomascota" class="col-sm-2" asp-items="Model.tipomascota"></select>
+</div>
+
+<div class="form-group row">
+        <label asp-for="documentopropietario" class="col-sm-2">Propietario</label>
+        <select asp-for="documentopropietario" class="col-sm-2" asp-items="Model.propietarios"></select>
+</div>
+
+<div class="form-group row">
+    <button typ="submit" class="btn btn-primary">Guardar</button>
+    <a asp-page = "./ListVeterinarios" class = "btn btn-primary"> Cancelar</a>
+</div>
+
+</form>

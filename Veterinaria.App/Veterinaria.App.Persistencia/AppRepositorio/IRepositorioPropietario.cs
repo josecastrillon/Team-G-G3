@@ -12,6 +12,6 @@ namespace Veterinaria.App.Persistencia
         Propietario AddPropietario (Propietario propietario);
         Propietario UpdatePropietario (Propietario propietario);
         void DeletePropietario (string documento);
-        Propietario GetPropietario (Propietario documento);
+        Propietario GetPropietario (string documento);
     }
 }

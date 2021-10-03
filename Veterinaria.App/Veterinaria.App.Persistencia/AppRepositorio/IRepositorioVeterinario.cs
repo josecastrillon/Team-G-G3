@@ -13,7 +13,7 @@ namespace Veterinaria.App.Persistencia
 
         void DeleteVeterinario (string documento);
 
-        Veterinario GetVeterinario(Veterinario veterinario);
+        Veterinario GetVeterinario(string documento);
 
 
     }

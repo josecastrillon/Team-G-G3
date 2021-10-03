@@ -1,0 +1,13 @@
+﻿@page
+@model Veterinaria.App.Frontend.Pages.DetailMascotasModel
+@{
+}
+
+<h1>Detalle Mascota</h1>
+
+<ul >
+  <li class="list-group-item">Nombre: @Model.mascota.nombre</li>
+  <li class="list-group-item">Fecha de Nacimiento: @Model.mascota.fechaNacimiento</li>
+  <li class="list-group-item">Propietario: @Model.mascota.propietario.nombre</li>
+  <li class="list-group-item">Tipo de Mascota: @Model.mascota.tipoMascota.clase</li>
+</ul>

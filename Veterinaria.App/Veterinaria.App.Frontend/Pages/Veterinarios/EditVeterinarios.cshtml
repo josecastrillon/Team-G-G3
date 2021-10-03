@@ -1,4 +1,61 @@
 ﻿@page
 @model Veterinaria.App.Frontend.Pages.EditVeterinariosModel
+@using Veterinaria.App.Dominio
 @{
 }
+<h1>Actualizar Veterinario</h1>
+<form method ="post" class ="mt-3">
+<input hidden asp-for = "veterinario.Id">
+<div class="form-group row">
+    <label asp-for="veterinario.documento" class ="col-sm-2">Documento</label>
+    <input asp-for = "veterinario.documento" class ="form-control"  required>
+</div>
+
+<div class="form-group row">
+    <label asp-for="veterinario.nombre" class ="col-sm-2">Nombre</label>
+    <input asp-for = "veterinario.nombre" class ="form-control" >
+</div>
+
+<div class="form-group row">
+    <label asp-for="veterinario.apellido" class ="col-sm-2">Apellido</label>
+    <input asp-for = "veterinario.apellido" class ="form-control" >
+</div>
+
+<div class="form-group row">
+    <label asp-for="veterinario.direccion" class ="col-sm-2">Dirección</label>
+    <input asp-for = "veterinario.direccion" class ="form-control" >
+</div>
+
+<div class="form-group row">
+    <label asp-for="veterinario.telefono" class ="col-sm-2">Teléfono</label>
+    <input asp-for = "veterinario.telefono" class ="form-control" >
+</div>
+
+<div class="form-group row">
+    <label asp-for="veterinario.ciudad" class ="col-sm-2">Ciudad</label>
+    <input asp-for = "veterinario.ciudad" class ="form-control" >
+</div>
+
+<div class="form-group row">
+    <label asp-for="veterinario.password" class ="col-sm-2">Password</label>
+    <input asp-for = "veterinario.password" class ="form-control" >
+</div>
+
+<div class="form-group row">
+    <label asp-for="veterinario.genero" class ="col-sm-2">Género</label>
+    <div class = "col-sm-10">
+        <select asp-for="veterinario.genero" asp-items = "Html.GetEnumSelectList<Genero>()"></select>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label asp-for="veterinario.tarjetaProfesional" class ="col-sm-2">Tarjeta Profesional</label>
+    <input asp-for = "veterinario.tarjetaProfesional" class ="form-control"  required>
+</div>
+
+<div class="form-group row">
+    <button typ="submit" class="btn btn-primary">Guardar</button>
+    <a asp-page = "./ListVeterinarios" class = "btn btn-primary"> Cancelar</a>
+</div>
+
+</form>

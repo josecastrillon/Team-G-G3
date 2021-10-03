@@ -1,0 +1,53 @@
+﻿@page
+@model Veterinaria.App.Frontend.Pages.ListPropietariosModel
+@{
+}
+
+<h1>Gestionar Propietarios</h1>
+<p>En este espacio podras gestionar los propietarios</p>
+<a class = "btn btn-primary table-btn" asp-page="./AddPropietarios">Agregar Nuevo Propietario</a>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      
+      <th scope="col">Documento</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">ciudad</th>
+      <th scope="col">Password</th>
+      <th scope="col">Género</th>
+      <th scope="col">Opciones</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    @foreach( var propietario in Model.propietarios){
+        
+        <tr>
+      
+      
+      <td>@propietario.documento</td>
+      <td>@propietario.nombre</td>
+      <td>@propietario.apellido</td>
+      <td>@propietario.direccion</td>
+      <td>@propietario.telefono</td>
+      <td>@propietario.ciudad</td>
+      <td>@propietario.password</td>
+      <td>@propietario.genero</td>
+      
+      
+      <td><a class="btn btn-primary table-btn" asp-page=".\DetailPropietarios" asp-route-documento=@propietario.documento>Detalles</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\EditPropietarios" asp-route-documento=@propietario.documento>Editar</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\RemovePropietarios" asp-route-documento=@propietario.documento>Eliminar</a>
+       
+      </td>
+
+    </tr>
+    
+    }
+   
+   
+  </tbody>
+</table>

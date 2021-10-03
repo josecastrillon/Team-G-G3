@@ -1,0 +1,19 @@
+﻿@page
+@model Veterinaria.App.Frontend.Pages.AddTipoMascotasModel
+@{
+}
+
+<h1>Crear Mascota</h1>
+<form method ="post" class ="mt-3">
+<input hidden asp-for = "tipomascota.Id">
+<div class="form-group row">
+    <label asp-for="tipomascota.clase" class ="col-sm-2">Clase</label>
+    <input asp-for = "tipomascota.clase" class ="form-control" value="" required>
+</div>
+
+<div class="form-group row">
+    <button typ="submit" class="btn btn-primary">Guardar</button>
+    <a asp-page = "./ListVeterinarios" class = "btn btn-primary"> Cancelar</a>
+</div>
+
+</form>

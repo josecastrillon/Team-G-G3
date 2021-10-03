@@ -18,6 +18,7 @@
       <th scope="col">Password</th>
       <th scope="col">Género</th>
       <th scope="col">Tarjeta Profesional</th>
+      <th scope="col">Opciones</th>
       
     </tr>
   </thead>
@@ -37,8 +38,12 @@
       <td>@veterinarios.genero</td>
       <td>@veterinarios.tarjetaProfesional</td>
       
-      <td><a class="btn btn-primary table-btn" asp-page=".\DetailVeterinarios" asp-route-cedula=@veterinarios.documento></a>Detalles</td>
-      <td><a class= "btn btn-primary table-btn" asp-page=".\EditVeterinarios" asp-route-cedula=@veterinarios.documento></a>Editar</td>
+      <td><a class="btn btn-primary table-btn" asp-page=".\DetailVeterinarios" asp-route-documento=@veterinarios.documento>Detalles</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\EditVeterinarios" asp-route-documento=@veterinarios.documento>Editar</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\RemoveVeterinarios" asp-route-documento=@veterinarios.documento>Eliminar</a>
+       
+      </td>
+
     </tr>
     
     }

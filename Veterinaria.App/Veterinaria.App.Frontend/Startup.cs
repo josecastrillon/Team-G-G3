@@ -26,6 +26,9 @@ namespace Veterinaria.App.Frontend
         {
             services.AddRazorPages();
             services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(new AppContexto()));
+            services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new AppContexto()));
+            services.AddSingleton<IRepositorioTipoMascota>(new RepositorioTipoMascota(new AppContexto()));
+            services.AddSingleton<IRepositorioPropietario>(new RepositorioPropietario(new AppContexto()));
             
         }
 

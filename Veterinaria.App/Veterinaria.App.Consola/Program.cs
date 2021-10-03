@@ -6,30 +6,24 @@ namespace Veterinaria.App.Consola
 {
     class Program
     {
-        public static IRepositorioVeterinario _repoVeterinario = new  RepositorioVeterinario(new Persistencia.AppContexto());
+        public static IRepositorioTipoMascota _repoTipoMascota = new  RepositorioTipoMascota(new Persistencia.AppContexto());
 
         static void Main(string[] args)
         {
             
             //AddVeterinario();
+            AddTipoMascota();
         }
 
-        private static void AddVeterinario (){
+        private static void AddTipoMascota (){
                 
-                Veterinario nveterinario = new Veterinario{
+                TipoMascota ntipomascota = new TipoMascota{
 
-                    documento = "100",
-                    nombre="Carlos",
-                    apellido="Paez",
-                    direccion = "Calle 1 No 2 3",
-                    telefono = "5705000",
-                    ciudad="Manizales",
-                    genero = Genero.masculino,
-                    tarjetaProfesional = "tp1"
+                    clase ="gato",
 
                 };
 
-                _repoVeterinario.AddVeterinario(nveterinario);
+                _repoTipoMascota.AddTipoMascota(ntipomascota);
             }
     }
 }

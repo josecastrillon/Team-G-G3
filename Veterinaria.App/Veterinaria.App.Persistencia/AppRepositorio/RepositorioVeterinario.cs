@@ -38,15 +38,15 @@ namespace Veterinaria.App.Persistencia
             return _appContexto.Veterinarios;
         }
 
-        public Veterinario GetVeterinario(Veterinario veterinario)
+        public Veterinario GetVeterinario(string documento)
         {
-            Veterinario veterinarioencontrado = _appContexto.Veterinarios.Where(x => x.documento == veterinario.documento).FirstOrDefault();
+            Veterinario veterinarioencontrado = _appContexto.Veterinarios.Where(x => x.documento == documento).FirstOrDefault();
             return veterinarioencontrado;
         }
 
         public Veterinario UpdateVeterinario(Veterinario veterinario)
         {
-            Veterinario veterinarioencontrado = _appContexto.Veterinarios.Where(x => x.documento == veterinario.documento).FirstOrDefault();
+            Veterinario veterinarioencontrado = _appContexto.Veterinarios.Where(x => x.Id == veterinario.Id).FirstOrDefault();
             if (veterinarioencontrado != null)
             {
                 veterinarioencontrado.nombre = veterinario.nombre;
@@ -57,7 +57,9 @@ namespace Veterinaria.App.Persistencia
                 veterinarioencontrado.password = veterinario.password;
                 veterinarioencontrado.genero = veterinario.genero;
                 veterinarioencontrado.tarjetaProfesional = veterinario.tarjetaProfesional;
+                _appContexto.SaveChanges();
             }
+            
             return veterinarioencontrado;
         }
     }

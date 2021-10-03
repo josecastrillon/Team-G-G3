@@ -1,4 +1,17 @@
 ﻿@page
 @model Veterinaria.App.Frontend.Pages.DetailVeterinariosModel
+@using Veterinaria.App.Dominio;
 @{
 }
+<h1>Detalle Veterinario</h1>
+
+<ul >
+  <li class="list-group-item">Documento: @Model.veterinario.documento</li>
+  <li class="list-group-item">Nombre: @Model.veterinario.nombre</li>
+  <li class="list-group-item">Apellido: @Model.veterinario.apellido</li>
+  <li class="list-group-item">Dirección: @Model.veterinario.direccion</li>
+  <li class="list-group-item">Teléfono: @Model.veterinario.telefono</li>
+  <li class="list-group-item">Password: @Model.veterinario.password</li>
+  <li class="list-group-item">Género: @Model.veterinario.genero</li>
+  <li class="list-group-item">Tarjeta Profesional: @Model.veterinario.tarjetaProfesional</li>
+</ul>
