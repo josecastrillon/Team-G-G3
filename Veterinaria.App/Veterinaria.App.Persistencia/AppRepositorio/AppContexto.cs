@@ -18,6 +18,9 @@ namespace Veterinaria.App.Persistencia
         public DbSet<Propietario> Propietarios { get; set; }
         public DbSet<Receta> Recetas { get; set; }
         public DbSet<TipoMascota> TiposMascotas { get; set; }
+        public DbSet<Horario> Horarios { get; set; }
+
+        public DbSet<HorarioVeterinario> HorariosVeterinarios { get; set; }
         
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

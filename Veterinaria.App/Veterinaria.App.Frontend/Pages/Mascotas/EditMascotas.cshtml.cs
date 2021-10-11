@@ -62,22 +62,16 @@ namespace Veterinaria.App.Frontend.Pages
         {
             if (ModelState.IsValid)
             {
-                Console.WriteLine("entro");
+                
                 TipoMascota tipomascota = iRepositorioTipoMascota.GetTipoMascota(idtipomascota);
                 Propietario propietario = iRepositorioPropietario.GetPropietario(documentopropietario);
 
                 try
                 {
-                    Console.WriteLine("id: "+mascota.Id);
-                    Console.WriteLine("nombre: "+mascota.nombre);
-                    Console.WriteLine("fecha "+mascota.fechaNacimiento);
-                    Console.WriteLine("entro try");
+                    
                     mascota.tipoMascota = tipomascota;
-                    Console.WriteLine("valtipomascota: "+tipomascota.clase);
                     mascota.propietario = propietario;
-                    Console.WriteLine("valpropi: "+propietario.nombre);
                     iRepositorioMascota.UpdateMascota(mascota);
-                    Console.WriteLine("band");
                     
                     return RedirectToPage("./ListMascotas");
                 }

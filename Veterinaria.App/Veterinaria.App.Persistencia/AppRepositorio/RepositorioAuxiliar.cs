@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System;
+using System.Linq;
 using Veterinaria.App.Dominio;
+
 
 namespace Veterinaria.App.Persistencia
 {
@@ -25,22 +27,41 @@ namespace Veterinaria.App.Persistencia
 
         public void DeleteAuxiliar(string documento)
         {
-            throw new NotImplementedException();
+            var auxiliarencontrado = _appContexto.Auxiliares.Where(x => x.documento == documento).FirstOrDefault();
+            if (auxiliarencontrado != null){
+                _appContexto.Auxiliares.Remove(auxiliarencontrado);
+                _appContexto.SaveChanges();
+            }
+
+
         }
 
         public IEnumerable<Auxiliar> GetAllAuxiliar()
         {
-            throw new NotImplementedException();
+            return _appContexto.Auxiliares;
         }
 
-        public Auxiliar GetAuxiliar(Auxiliar auxiliar)
+        public Auxiliar GetAuxiliar(string documento)
         {
-            throw new NotImplementedException();
+            var auxiliarencontrado = _appContexto.Auxiliares.Where(x => x.documento == documento).FirstOrDefault();
+            return auxiliarencontrado;
         }
 
         public Auxiliar UpdateAuxiliar(Auxiliar auxiliar)
         {
-            throw new NotImplementedException();
+            var auxiliarencontrado = _appContexto.Auxiliares.Where(x => x.documento == auxiliar.documento).FirstOrDefault();
+            if (auxiliarencontrado != null)
+            {
+                auxiliarencontrado.nombre =auxiliar.nombre;
+                auxiliarencontrado.apellido = auxiliar.apellido;
+                auxiliarencontrado.ciudad = auxiliar.ciudad;
+                auxiliarencontrado.direccion = auxiliar.direccion;
+                auxiliarencontrado.documento = auxiliar.documento;
+                auxiliarencontrado.genero = auxiliar.genero;
+                auxiliarencontrado.password = auxiliar.password;
+                _appContexto.SaveChanges();
+            }
+            return auxiliarencontrado;
         }
     }
 }

@@ -1,0 +1,46 @@
+﻿@page
+@model Veterinaria.App.Frontend.Pages.ListHorariosModel
+@{
+}
+
+<h1>Gestionar Horarios</h1>
+<p>En este espacio podras gestionar los horarios</p>
+<a class = "btn btn-primary table-btn" asp-page="./AddHorarios">Agregar Nuevo Horario</a>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      
+      
+      <th scope="col">Id</th>
+      <th scope="col">Hora Inicio</th>
+      <th scope="col">Hora Fin</th>
+      <th scope="col">Dia de la Semana</th>
+      <th scope="col">Opciones</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    @foreach( var horarios in Model.horarios){
+        
+        <tr>
+            
+      <td>@horarios.Id</td>
+      <td>@horarios.horaInicio.ToString("hh:mm")</td>
+      <td>@horarios.horaFin.ToString("hh:mm")</td>
+      <td>@horarios.diaSemana</td>
+      
+      
+      <td><a class="btn btn-primary table-btn" asp-page=".\" asp-route-Id=@horarios.Id>Detalles</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\" asp-route-Id=@horarios.Id>Editar</a>
+       <a class= "btn btn-primary table-btn" asp-page=".\" asp-route-Id=@horarios.Id>Eliminar</a>
+       
+      </td>
+
+    </tr>
+    
+    }
+   
+   
+  </tbody>
+</table>

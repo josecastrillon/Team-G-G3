@@ -13,7 +13,7 @@ namespace Veterinaria.App.Persistencia
 
         void DeleteAuxiliar (string documento);
 
-        Auxiliar GetAuxiliar(Auxiliar auxiliar);
+        Auxiliar GetAuxiliar(string documento);
 
 
     }

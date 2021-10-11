@@ -1,45 +1,79 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Veterinaria.App.Frontend</title>
+    <title>@ViewData["Title"] -Clínica Veterinaria</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="~/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon-16x16.png">
+    <link rel="manifest" href="~/images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-info border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Clínica Veterinaria Team G</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Team G</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Veterinarios/ListVeterinarios">Lista Veterinarios</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Veterinarios/ListVeterinarios">Lista
+                                Veterinarios</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Mascotas/ListMascotas">Lista Mascotas</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Mascotas/ListMascotas">
+                                Mascotas</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/TipoMascotas/ListTipoMascotas">Lista Tipos de Mascota</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/TipoMascotas/ListTipoMascotas">
+                                Tipos de Mascota</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Propietarios/ListPropietarios">Lista Propietarios</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Propietarios/ListPropietarios">
+                                Propietarios</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Horarios/ListHorarios">
+                                Horarios</a>
                         </li>
                     </ul>
+                </div>
+                <div class="d-flex align-items-center">
+                    <button type="button" class="btn btn-primary me-3">
+                        Ingregar
+                    </button>
+                    <button type="button" class="btn btn-primary me-3">
+                        Registrate
+                    </button>
                 </div>
             </div>
         </nav>
@@ -47,6 +81,10 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
+            
+            <div align="center"><img src="~/images/perrosygatos.jpg"></div>
+            
+
         </main>
     </div>
 
@@ -62,4 +100,5 @@
 
     @RenderSection("Scripts", required: false)
 </body>
+
 </html>

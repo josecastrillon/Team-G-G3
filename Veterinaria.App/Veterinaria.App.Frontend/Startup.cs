@@ -25,10 +25,13 @@ namespace Veterinaria.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(new AppContexto()));
-            services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new AppContexto()));
-            services.AddSingleton<IRepositorioTipoMascota>(new RepositorioTipoMascota(new AppContexto()));
-            services.AddSingleton<IRepositorioPropietario>(new RepositorioPropietario(new AppContexto()));
+            AppContexto _contexto = new AppContexto();
+            services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(_contexto));
+            services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(_contexto));
+            services.AddSingleton<IRepositorioTipoMascota>(new RepositorioTipoMascota(_contexto));
+            services.AddSingleton<IRepositorioPropietario>(new RepositorioPropietario(_contexto));
+            services.AddSingleton<IRepositorioHorarios>(new RepositorioHorarios(_contexto));
+            services.AddSingleton<IRepositorioHorarioVeterinario>(new RepositorioHorarioVeterinario(_contexto));
             
         }
 

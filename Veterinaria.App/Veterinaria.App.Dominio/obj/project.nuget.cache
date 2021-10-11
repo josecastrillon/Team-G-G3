@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8LmC1/9ew02E8Bu3jZ8GR5DjdwjpRwWSweRyGetTRsey2LpJ4rprSWuChj50k+0uWNBp6nONgsnwhKh2FhNGZg==",
+  "dgSpecHash": "vUc3UUtEffBZYdw7qS7s81zzlL9Vyhmk/uNJzoW4QFVNMoZaBVKjVydlMmX79Und0W+1nnSQ9XL0+AyQCuPy9w==",
   "success": true,
   "projectFilePath": "C:\\Users\\David Prieto\\Documents\\GitHub\\Team-G-G3\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\David Prieto\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -46,13 +46,13 @@ namespace Veterinaria.App.Persistencia
 
         public Mascota UpdateMascota(Mascota mascota)
         {
-            Console.WriteLine("valor id "+mascota.Id);
+            
             Mascota mascotaencontrada = _appContexto.Mascotas.Where(c => c.Id == mascota.Id).FirstOrDefault();
-            Console.WriteLine("entre a update pero no al if");
+            
             
             if (mascotaencontrada != null)
             {
-                Console.WriteLine("Entre actualizar");
+                
                 mascotaencontrada.nombre = mascota.nombre;
                 mascotaencontrada.fechaNacimiento = mascota.fechaNacimiento;
                 mascotaencontrada.propietario = mascota.propietario;

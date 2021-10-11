@@ -1,0 +1,35 @@
+﻿@page
+@model Veterinaria.App.Frontend.Pages.AddHorariosModel
+@using Veterinaria.App.Dominio
+@{
+}
+
+<h1>Crear Horario</h1>
+<form method ="post" class ="mt-3">
+<input hidden asp-for = "horario.Id">
+<div class="form-group row">
+    <label asp-for="horario.horaInicio" class ="col-sm-2">Hora Inicio</label>
+    <input asp-for="horario.horaInicio" class="form-control" type="time">
+    <span asp-validation-for="horario.horaInicio" class="text-danger"></span>
+  
+</div>
+
+<div class="form-group row">
+    <label asp-for="horario.horaFin" class ="col-sm-2">Hora Fin</label>
+    <input asp-for="horario.horaFin" class="form-control" type="time">
+    <span asp-validation-for="horario.horaFin" class="text-danger"></span>
+</div>
+
+<div class="form-group row">
+    <label asp-for="horario.diaSemana" class ="col-sm-2">Día de la Semana</label>
+    <div class = "col-sm-10">
+        <select asp-for="horario.diaSemana" asp-items = "Html.GetEnumSelectList<DiaSemana>()"></select>
+    </div>
+</div>
+
+<div class="form-group row">
+    <button typ="submit" class="btn btn-primary">Guardar</button>
+    <a asp-page = "./ListHorarios" class = "btn btn-primary"> Cancelar</a>
+</div>
+
+</form>

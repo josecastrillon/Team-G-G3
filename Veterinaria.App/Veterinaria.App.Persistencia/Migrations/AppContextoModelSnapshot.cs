@@ -90,6 +90,49 @@ namespace Veterinaria.App.Persistencia.Migrations
                     b.ToTable("HistoriasClinicas");
                 });
 
+            modelBuilder.Entity("Veterinaria.App.Dominio.Horario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("diaSemana")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("horaFin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("horaInicio")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Horarios");
+                });
+
+            modelBuilder.Entity("Veterinaria.App.Dominio.HorarioVeterinario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("horarioId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("veterinarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("horarioId");
+
+                    b.HasIndex("veterinarioId");
+
+                    b.ToTable("HorariosVeterinarios");
+                });
+
             modelBuilder.Entity("Veterinaria.App.Dominio.Mascota", b =>
                 {
                     b.Property<int>("Id")
@@ -266,6 +309,21 @@ namespace Veterinaria.App.Persistencia.Migrations
                         .HasForeignKey("mascotaId");
 
                     b.Navigation("mascota");
+                });
+
+            modelBuilder.Entity("Veterinaria.App.Dominio.HorarioVeterinario", b =>
+                {
+                    b.HasOne("Veterinaria.App.Dominio.Horario", "horario")
+                        .WithMany()
+                        .HasForeignKey("horarioId");
+
+                    b.HasOne("Veterinaria.App.Dominio.Veterinario", "veterinario")
+                        .WithMany()
+                        .HasForeignKey("veterinarioId");
+
+                    b.Navigation("horario");
+
+                    b.Navigation("veterinario");
                 });
 
             modelBuilder.Entity("Veterinaria.App.Dominio.Mascota", b =>

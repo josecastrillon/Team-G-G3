@@ -25,6 +25,7 @@
       "Veterinaria.App.Frontend/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
+          "System.ComponentModel.Annotations": "5.0.0",
           "Veterinaria.App.Dominio": "1.0.0",
           "Veterinaria.App.Persistencia": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1385,6 +1386,9 @@
         }
       },
       "Veterinaria.App.Dominio/1.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "runtime": {
           "Veterinaria.App.Dominio.dll": {}
         },

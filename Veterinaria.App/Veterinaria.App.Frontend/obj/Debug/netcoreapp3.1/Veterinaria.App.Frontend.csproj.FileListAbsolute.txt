@@ -101,3 +101,6 @@ C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App
 C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\DetailPropietarios.cshtml.g.cs
 C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\EditPropietarios.cshtml.g.cs
 C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\RemovePropietarios.cshtml.g.cs
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Horarios\ListHorarios.cshtml.g.cs
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\HorariosVeterinarios\ListHorariosVeterinarios.cshtml.g.cs
+C:\Users\David Prieto\Documents\GitHub\Team-G-G3\Veterinaria.App\Veterinaria.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Horarios\AddHorarios.cshtml.g.cs

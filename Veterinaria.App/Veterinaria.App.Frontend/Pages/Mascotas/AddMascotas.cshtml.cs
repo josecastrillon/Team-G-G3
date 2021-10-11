@@ -50,7 +50,7 @@ namespace Veterinaria.App.Frontend.Pages
             propietarios = iRepositorioPropietario.GetAllPropietario().Select(
                 m => new SelectListItem
                 {
-                    Value = m.documento,
+                    Value = Convert.ToString (m.documento),
                     Text = m.nombre+" "+ m.apellido,
                     }
                     ).ToList();
@@ -66,10 +66,10 @@ namespace Veterinaria.App.Frontend.Pages
 
                 try
                 {
-                    iRepositorioMascota.AddMascota(mascota);
+                    
                     mascota.tipoMascota = tipomascota;
                     mascota.propietario = propietario;
-                    iRepositorioMascota.UpdateMascota(mascota);
+                    iRepositorioMascota.AddMascota(mascota);
                     return RedirectToPage("./ListMascotas");
                 }
                 catch (Exception e)
