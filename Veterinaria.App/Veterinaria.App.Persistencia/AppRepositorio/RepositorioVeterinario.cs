@@ -8,15 +8,19 @@ namespace Veterinaria.App.Persistencia
     public class RepositorioVeterinario: IRepositorioVeterinario
     {
         private readonly AppContexto _appContexto;
+        private readonly Security security;
 
         public RepositorioVeterinario(AppContexto _appContexto)
         {
             this._appContexto = _appContexto;
+            security = new Security ();
         }
 
         public Veterinario AddVeterinario(Veterinario veterinario)
         {
-            
+            String pass= veterinario.password;
+            pass = security.GetMD5Hash(pass);
+            veterinario.password = pass;
             var medicoagregado = _appContexto.Add(veterinario);
             _appContexto.SaveChanges();
             return medicoagregado.Entity;

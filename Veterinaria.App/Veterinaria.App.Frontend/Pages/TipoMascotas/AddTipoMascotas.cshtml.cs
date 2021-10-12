@@ -12,29 +12,40 @@ namespace Veterinaria.App.Frontend.Pages
 
     public class AddTipoMascotasModel : PageModel
     {
-    private readonly IRepositorioTipoMascota iRepositorioTipoMascota;
+        private readonly IRepositorioTipoMascota iRepositorioTipoMascota;
 
-    public TipoMascota tipomascota { get;set;}
+        public TipoMascota tipomascota { get; set; }
 
-    public AddTipoMascotasModel (IRepositorioTipoMascota iRepositorioTipoMascota)
-    {
-        this.iRepositorioTipoMascota = iRepositorioTipoMascota;
-    }
+        public AddTipoMascotasModel(IRepositorioTipoMascota iRepositorioTipoMascota)
+        {
+            this.iRepositorioTipoMascota = iRepositorioTipoMascota;
+        }
         public void OnGet()
         {
             tipomascota = new TipoMascota();
         }
         public IActionResult Onpost(TipoMascota tipomascota)
-        
+
         {
-            try{
-                iRepositorioTipoMascota.AddTipoMascota(tipomascota);
-                return RedirectToPage("./AddTipoMascotas");
+
+            if (ModelState.IsValid)
+            {
+
+                try
+                {
+                    iRepositorioTipoMascota.AddTipoMascota(tipomascota);
+                    return RedirectToPage("./ListTipoMascotas");
+                }
+                catch
+                {
+                    return RedirectToPage("./Error");
+
+                }
+            }else{
+                return Page();
             }
 
-            catch{
-                return RedirectToPage("./Error");
-            }
         }
+
     }
 }
