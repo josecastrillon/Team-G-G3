@@ -18,6 +18,9 @@ namespace Veterinaria.App.Dominio
         public String telefono { get; set; }
         [Required(ErrorMessage="El campo es obligatorio")]
         public String ciudad { get; set; }
+
+        [Required(ErrorMessage="El campo es obligatorio"),EmailAddress]
+        public String email { get; set; }
         [Required(ErrorMessage="El campo es obligatorio"), DataType(DataType.Password)]
         public String password { get; set; }
         [Required(ErrorMessage="El campo es obligatorio")]

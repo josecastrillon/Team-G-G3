@@ -9,37 +9,50 @@
 <input hidden asp-for = "veterinario.Id">
 <div class="form-group row">
     <label asp-for="veterinario.documento" class ="col-sm-2">Documento</label>
-    <input asp-for = "veterinario.documento" class ="form-control" value="" required>
+    <input asp-for = "veterinario.documento" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=veterinario.documento></span>
 </div>
 
 <div class="form-group row">
     <label asp-for="veterinario.nombre" class ="col-sm-2">Nombre</label>
     <input asp-for = "veterinario.nombre" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=veterinario.documento></span>
 </div>
 
 <div class="form-group row">
     <label asp-for="veterinario.apellido" class ="col-sm-2">Apellido</label>
     <input asp-for = "veterinario.apellido" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=veterinario.documento></span>
 </div>
 
 <div class="form-group row">
     <label asp-for="veterinario.direccion" class ="col-sm-2">Dirección</label>
     <input asp-for = "veterinario.direccion" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=veterinario.documento></span>
 </div>
 
 <div class="form-group row">
     <label asp-for="veterinario.telefono" class ="col-sm-2">Teléfono</label>
     <input asp-for = "veterinario.telefono" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=veterinario.documento></span>
 </div>
 
 <div class="form-group row">
     <label asp-for="veterinario.ciudad" class ="col-sm-2">Ciudad</label>
     <input asp-for = "veterinario.ciudad" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=veterinario.documento></span>
+</div>
+
+<div class="form-group row">
+    <label asp-for="veterinario.email" class ="col-sm-2">Correo electrónico</label>
+    <input asp-for = "veterinario.email" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=veterinario.email></span>
 </div>
 
 <div class="form-group row">
     <label asp-for="veterinario.password" class ="col-sm-2">Password</label>
     <input asp-for = "veterinario.password" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=veterinario.documento></span>
 </div>
 
 <div class="form-group row">
@@ -51,7 +64,8 @@
 
 <div class="form-group row">
     <label asp-for="veterinario.tarjetaProfesional" class ="col-sm-2">Tarjeta Profesional</label>
-    <input asp-for = "veterinario.tarjetaProfesional" class ="form-control" value="" required>
+    <input asp-for = "veterinario.tarjetaProfesional" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=veterinario.documento></span>
 </div>
 
 <div class="form-group row">

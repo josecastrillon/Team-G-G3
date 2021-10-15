@@ -55,6 +55,7 @@ namespace Veterinaria.App.Persistencia
                 propietarioencontrado.direccion = propietario.direccion;
                 propietarioencontrado.telefono = propietario.telefono;
                 propietarioencontrado.ciudad = propietario.ciudad;
+                propietarioencontrado.email = propietario.email;
                 propietarioencontrado.password = propietario.password;
                 propietarioencontrado.genero = propietario.genero;
                 _appContexto.SaveChanges();

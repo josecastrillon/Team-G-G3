@@ -8,7 +8,8 @@
 <input hidden asp-for = "tipomascota.Id">
 <div class="form-group row">
     <label asp-for="tipomascota.clase" class ="col-sm-2">Clase</label>
-    <input asp-for = "tipomascota.clase" class ="form-control" value="" required>
+    <input asp-for = "tipomascota.clase" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=tipomascota.clase></span>
 </div>
 
 <div class="form-group row">

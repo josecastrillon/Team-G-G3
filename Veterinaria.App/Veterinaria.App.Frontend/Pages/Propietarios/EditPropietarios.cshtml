@@ -38,6 +38,12 @@
 </div>
 
 <div class="form-group row">
+    <label asp-for="propietario.email" class ="col-sm-2">Correo electrónico</label>
+    <input asp-for = "propietario.email" class ="form-control" value="">
+    <span class="text-danger" asp-validation-for=propietario.email></span>
+</div>
+
+<div class="form-group row">
     <label asp-for="propietario.password" class ="col-sm-2">Password</label>
     <input asp-for = "propietario.password" class ="form-control" >
 </div>

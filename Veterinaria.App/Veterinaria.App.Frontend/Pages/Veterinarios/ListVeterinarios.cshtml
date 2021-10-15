@@ -15,9 +15,6 @@
       <th scope="col">Dirección</th>
       <th scope="col">Teléfono</th>
       <th scope="col">ciudad</th>
-      <th scope="col">Password</th>
-      <th scope="col">Género</th>
-      <th scope="col">Tarjeta Profesional</th>
       <th scope="col">Opciones</th>
       
     </tr>
@@ -34,9 +31,7 @@
       <td>@veterinarios.direccion</td>
       <td>@veterinarios.telefono</td>
       <td>@veterinarios.ciudad</td>
-      <td>@veterinarios.password</td>
-      <td>@veterinarios.genero</td>
-      <td>@veterinarios.tarjetaProfesional</td>
+
       
       <td><a class="btn btn-primary table-btn" asp-page=".\DetailVeterinarios" asp-route-documento=@veterinarios.documento>Detalles</a>
        <a class= "btn btn-primary table-btn" asp-page=".\EditVeterinarios" asp-route-documento=@veterinarios.documento>Editar</a>

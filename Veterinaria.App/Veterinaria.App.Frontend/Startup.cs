@@ -24,7 +24,16 @@ namespace Veterinaria.App.Frontend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddRazorPages(
+                options => {
+                    options.Conventions.AuthorizeFolder("/Veterinarios");
+                    options.Conventions.AuthorizeFolder("/Mascotas");
+                    options.Conventions.AuthorizeFolder("/Horarios");
+                    options.Conventions.AuthorizeFolder("/HorariosVeterinarios");
+                    options.Conventions.AuthorizeFolder("/Propietarios");
+                    options.Conventions.AuthorizeFolder("/TipoMascotas");
+                }
+            );
             AppContexto _contexto = new AppContexto();
             services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(_contexto));
             services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(_contexto));
@@ -32,7 +41,8 @@ namespace Veterinaria.App.Frontend
             services.AddSingleton<IRepositorioPropietario>(new RepositorioPropietario(_contexto));
             services.AddSingleton<IRepositorioHorarios>(new RepositorioHorarios(_contexto));
             services.AddSingleton<IRepositorioHorarioVeterinario>(new RepositorioHorarioVeterinario(_contexto));
-            
+            services.AddSingleton<IRepositorioAuxiliar>(new RepositorioAuxiliar(_contexto));
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,11 +63,15 @@ namespace Veterinaria.App.Frontend
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name:"default",
+                    pattern:"{controllor=Conference}/{action=Index}/{id?}"
+                );
                 endpoints.MapRazorPages();
             });
         }

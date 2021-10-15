@@ -59,6 +59,7 @@ namespace Veterinaria.App.Persistencia
                 auxiliarencontrado.documento = auxiliar.documento;
                 auxiliarencontrado.genero = auxiliar.genero;
                 auxiliarencontrado.password = auxiliar.password;
+                auxiliarencontrado.email = auxiliar.email;
                 _appContexto.SaveChanges();
             }
             return auxiliarencontrado;

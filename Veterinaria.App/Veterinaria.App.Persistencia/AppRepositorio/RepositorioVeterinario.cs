@@ -60,6 +60,7 @@ namespace Veterinaria.App.Persistencia
                 veterinarioencontrado.ciudad = veterinario.ciudad;
                 veterinarioencontrado.password = veterinario.password;
                 veterinarioencontrado.genero = veterinario.genero;
+                veterinarioencontrado.email = veterinario.email;
                 veterinarioencontrado.tarjetaProfesional = veterinario.tarjetaProfesional;
                 _appContexto.SaveChanges();
             }
